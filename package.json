@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.css'",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9009 -s public ./src/assets",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
