@@ -1,15 +1,14 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import MemoComponent from './components'
-import { MessageInputEvent } from './@types/MessageInputEvent'
+import { MessageInputEvent } from '../../@types/MessageInputEvent'
 
-const Memo: FC = () => {
-  const [memoText, setMemoText] = useState('')
+interface MemoProps {
+  memoText: string
+  handleChange: (event: MessageInputEvent) => void
+}
 
-  const handleChange = (event: MessageInputEvent) => {
-    setMemoText(event.target.value)
-  }
-
-  return <MemoComponent text={memoText} handleChange={handleChange} />
+const Memo: FC<MemoProps> = prop => {
+  return <MemoComponent text={prop.memoText} handleChange={prop.handleChange} />
 }
 
 export default Memo

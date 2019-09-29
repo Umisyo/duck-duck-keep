@@ -1,7 +1,9 @@
 @import '../../../assets//style/variables';
 
 .memo__textarea {
-  width: 100%;
   height: auto;
   font-size: $font-s-size;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid;
 }

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import './style.scss'
-import { MessageInputEvent } from '../@types/MessageInputEvent'
+import { MessageInputEvent } from '../../../@types/MessageInputEvent'
 
 interface MemoComponentProps {
   text: string
