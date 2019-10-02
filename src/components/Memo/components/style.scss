@@ -1,11 +1,11 @@
 @import '../../../assets//style/variables';
 
 .memo__textarea {
-  height: auto;
-  font-size: $font-s-size;
-  margin-left: 10px;
-  margin-bottom: 10px;
   border: 1px solid;
+  font-size: $font-s-size;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: 10px;
 
   textarea {
     border: none;
