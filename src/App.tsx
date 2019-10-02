@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.scss'
-import Memo from './components/Memo'
+import MemoList from './components/MemoList'
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Memo />
+      <MemoList />
     </div>
   )
 }
