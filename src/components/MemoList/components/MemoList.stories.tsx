@@ -12,11 +12,14 @@ storiesOf('MemoListComponent', module).add('MemoComponent', () => {
   return (
     <MemoListComponent
       memoTextArray={memoTextArray}
-      handleClick={addArray}
-      handleChange={(index: number) => {
+      addMemo={addArray}
+      changeText={(index: number) => {
         return (event: MessageInputEvent) => {
           console.log(index, event)
         }
+      }}
+      decrement={(index: number) => () => {
+        console.log(index)
       }}
     />
   )

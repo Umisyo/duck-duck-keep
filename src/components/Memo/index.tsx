@@ -4,11 +4,18 @@ import { MessageInputEvent } from '../../@types/MessageInputEvent'
 
 interface MemoProps {
   memoText: string
-  handleChange: (event: MessageInputEvent) => void
+  changeText: (event: MessageInputEvent) => void
+  decrement: () => void
 }
 
 const Memo: FC<MemoProps> = prop => {
-  return <MemoComponent text={prop.memoText} handleChange={prop.handleChange} />
+  return (
+    <MemoComponent
+      text={prop.memoText}
+      changeText={prop.changeText}
+      decrement={prop.decrement}
+    />
+  )
 }
 
 export default Memo

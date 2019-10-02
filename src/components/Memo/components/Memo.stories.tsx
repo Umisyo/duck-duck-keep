@@ -5,8 +5,11 @@ import MemoComponent from '.'
 storiesOf('MemoComponent', module).add('MemoComponent', () => (
   <MemoComponent
     text="hello"
-    handleChange={event => {
+    changeText={event => {
       console.log(event.target.value)
+    }}
+    decrement={() => {
+      console.log('decrement')
     }}
   />
 ))

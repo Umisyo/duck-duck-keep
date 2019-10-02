@@ -4,16 +4,17 @@ import { MessageInputEvent } from '../../../@types/MessageInputEvent'
 
 interface MemoComponentProps {
   text: string
-  handleChange: (event: MessageInputEvent) => void
+  changeText: (event: MessageInputEvent) => void
+  decrement: () => void
 }
 
 const MemoComponent: FC<MemoComponentProps> = prop => (
-  <textarea
-    className="memo__textarea"
-    rows={10}
-    value={prop.text}
-    onChange={prop.handleChange}
-  />
+  <div className="memo__textarea">
+    <textarea rows={10} value={prop.text} onChange={prop.changeText} />
+    <button type="button" onClick={prop.decrement}>
+      -
+    </button>
+  </div>
 )
 
 export default MemoComponent

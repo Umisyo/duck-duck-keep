@@ -10,24 +10,38 @@ const MemoList: FC = () => {
     setMemoTextArray(newMemoTextArray)
   }
 
-  const handleChange = (index: number) => {
+  const createChangeText = (index: number) => {
     const changeText = (event: MessageInputEvent) => {
       const newMemoText: string = event.target.value
-      const newMemoTextArray: string[] = memoTextArray
-        .slice(0, index)
-        .concat([newMemoText])
-        .concat(memoTextArray.slice(index + 1))
+      const newMemoTextArray: string[] = [
+        ...memoTextArray.slice(0, index),
+        newMemoText,
+        ...memoTextArray.slice(index + 1),
+      ]
       setMemoTextArray(newMemoTextArray)
     }
 
     return changeText
   }
 
+  const decrement = (index: number) => {
+    const decrementArray = () => {
+      const newMemoTextArray: string[] = [
+        ...memoTextArray.slice(0, index),
+        ...memoTextArray.slice(index + 1),
+      ]
+      setMemoTextArray(newMemoTextArray)
+    }
+
+    return decrementArray
+  }
+
   return (
     <MemoListComponent
       memoTextArray={memoTextArray}
-      handleClick={addMemoText}
-      handleChange={handleChange}
+      addMemo={addMemoText}
+      changeText={createChangeText}
+      decrement={decrement}
     />
   )
 }
